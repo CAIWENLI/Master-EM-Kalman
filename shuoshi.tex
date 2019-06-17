@@ -1,0 +1,340 @@
+\documentclass[a4paper,CJK,twoside]{cctbook}
+\usepackage{ccmap}
+\usepackage{chngpage}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{amssymb,amsmath,amsthm,amscd,graphicx}
+\usepackage{mathrsfs,bbding,color}
+\usepackage{geometry}
+%\usepackage{chngcntr}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand\sectionformat{\left}
+\newtheorem{thm}{\heiti 定理}[section]
+\newtheorem{defin}{\heiti 定义}[section]
+\newtheorem{lem}{\heiti 引理}[section]
+\newtheorem{proper}{\heiti 性质}[section]
+\newtheorem{prop}{\heiti 命题}[section]
+\newtheorem{exam}{\heiti 例}[section]
+\newtheorem{prob}{\heiti 问题}[section]
+\newtheorem{cor}{\heiti 推论}[section]
+\newtheorem{rem}{\heiti 注}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\bee}{\begin{eqnarray*}}
+\newcommand{\eee}{\end{eqnarray*}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bn}{\begin{enumerate}}
+\newcommand{\en}{\end{enumerate}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\mb}{\mbox}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\ml}{\mathcal}
+\newcommand{\mr}{\mathscr}
+\newcommand{\al}{\alpha}
+\newcommand{\vl}{\varepsilon}
+\newcommand{\La}{\Lambda}
+\newcommand{\ga}{\gamma}
+
+\newcommand{\pa}{\partial}
+\newcommand{\tri}{\triangle}
+
+\newcommand{\1}{\hspace{5mm}}
+\renewcommand\baselinestretch{1.5}
+
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoyi}{\fontsize{24pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{1.5\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowu}{\fontsize{9pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoliu}{\fontsize{6.5pt}{\baselineskip}\selectfont}
+\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}
+
+%\baselineskip8mm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%双页显示%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\@evenhead{\pushziti
+    \vbox{\hbox to\textwidth{\rlap{\textbf{\thepage}}
+          \hfil{\leftmark}\llap{}\hfil\mbox{}}
+            \protect\vspace{1truemm}\relax
+            \hrule depth0pt height0.1truemm width\textwidth
+          }\popziti}
+\def\@oddhead{\pushziti
+    \vbox{\hbox to\textwidth{\mbox{}\hfil\rlap{}{\rightmark}
+          \hfil\llap{\textbf{\thepage}}}
+            \protect\vspace{1truemm}\relax
+            \hrule depth0pt height0.1truemm width\textwidth
+          }\popziti}
+\def\@evenfoot{}
+\def\@oddfoot{}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\newpage
+\thispagestyle{empty}
+ \noindent
+\songti
+ \zihao{-4}
+ {\begin{tabular}{ll}
+   学校代码:\hspace{4mm}\underline{\hspace{0.6cm}11658\hspace{0.8cm}}\hspace{4cm}
+  &学\hspace{10mm}号:\hspace{4mm}\underline{20100701***}\\
+  分\hspace{2mm}类\hspace{2mm}号:\hspace{4mm}\underline{\hspace{7mm}**** \hspace{7mm}}\hspace{4cm}
+  &密\hspace{10mm}级:\hspace{4mm}\underline{\hspace{9mm}无\hspace{9mm}}
+ \end{tabular}
+ \vspace{3mm}
+\begin{center}
+    \includegraphics[angle=0,totalheight=3cm]{xiaohui.jpg}
+ \end{center}
+ \vspace{3mm}
+ \begin{center}
+  {\heiti\chuhao 硕士学位论文}\\[20mm]
+  {\heiti\bf\erhao ******的研究}\\
+  \vspace{30mm}
+  \heiti\zihao{3}
+  \begin{tabular}{ll}
+  作\hspace{3.5mm}者\hspace{3.5mm}姓\hspace{3.5mm}名:
+                        &\underline{\hspace{17.5mm}李明\hspace{17.5mm}}\\[3mm]
+  学\hspace{3.5mm}科\hspace{3.5mm}专\hspace{3.5mm}业:
+                        &\underline{\hspace{12mm}基础数学\hspace{12mm}}\\[3mm]
+  研\hspace{3.5mm}究\hspace{3.5mm}方\hspace{3.5mm}向:
+                        &\underline{ 解析数论及其应用  }\\[3mm]
+  指\hspace{3.5mm}导\hspace{3.5mm}教\hspace{3.5mm}师:
+                        &\underline{\hspace{9mm}某某某教授\hspace{9mm}}\\[3mm]
+  申请学位类别:         &\underline{\hspace{12mm}理学硕士\hspace{12mm}}\\[3mm]
+  提\hspace{3.5mm}交\hspace{3.5mm}日\hspace{3.5mm}期:
+                        &\underline{\hspace{4.5mm}二〇一三年五月\hspace{4.5mm}}
+  \end{tabular}
+
+ \end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\begin{center}
+  \mb{}\\[15mm]
+  {\bf\large{\xiaoer *************************}}\\[25mm]
+  {\sihao A Dissertation Submitted for the Degree of Master}\\[35mm]
+  \begin{tabular}{ll}
+    {\bf{\xiaosan Candidate: **}}\\[5mm]
+    {\bf{\xiaosan Supervisor: Prof. ***}}
+    \end{tabular}
+        \vfill
+        \bf{\xiaosan Hainan Normal University}\\[3mm]
+        \bf {\xiaosan Haikou, China}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\begin{center}
+   {\songti\bf\xiaosan
+   独\hspace{5.5mm}创\hspace{5.5mm}性\hspace{5.5mm}声\hspace{5.5mm}明}
+\end{center}
+  \songti\zihao{-4}
+
+本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。
+除文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，
+也不包含为获得海南师范大学或其他教育机构的学位或证书而使用过的材料。
+与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。\\
+
+学位论文作者签名:\underline{\hspace{25mm}} \hspace{6mm} 日\hspace{16mm}期:\underline{\hspace{25mm}}
+
+\begin{center}
+  {\songti\bf\xiaosan
+  学位论文著作权声明}
+\end{center}
+\noindent
+
+{\songti\zihao{-4} 本论文作者声明}:
+
+$\Box$
+\zihao{-4}
+本论文全部成果均为本人和指导教师合作研究取得，
+本人和指导教师都有权使用本成果学术内容（有第三方约定者除外）。
+
+$\Box$
+\zihao{-4}
+本论文为指导教师指导下，本人独自完成。本人独自享有本论文的全部著作权。
+
+学位论文作者签名:\underline{\hspace{25mm}} \hspace{6mm}指导教师签名:\underline{\hspace{25mm}}
+
+日\hspace{25mm}期:\underline{\hspace{25mm}} \hspace{6mm}日\hspace{17mm}期:\underline{\hspace{25mm}}
+
+\begin{center}
+   {\songti\bf\xiaosan
+   学位论文版权使用授权书}
+\end{center}
+
+\zihao{-4}
+本学位论文作者完全了解海南师范大学有关保留、使用学位论文的规定，
+即：海南师范大学有权保留并向国家有关部门或机构送交学位论文的复印件和电子文本，
+允许论文被查阅和借阅。本人授权海南师范大学可以将学位论文的全部或部分内容编入有关数据库进行检索，
+可以采用影印、缩印或其它复制手段保存、汇编学位论文。
+
+（保密的学位论文在解密后适用本授权书）\\
+
+学位论文作者签名: \underline{\hspace{25mm}}  \hspace{6mm}指导教师签名:\underline{\hspace{25mm}}
+
+日\hspace{25mm}期: \underline{\hspace{25mm}}  \hspace{6mm}日\hspace{17mm}期:\underline{\hspace{25mm}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%摘  要%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+ {\heiti\xiaoer 摘 \ \ \ \ 要}
+\end{center}
+\zihao{-4}
+
+本文研究*****************************************
+
+**********************************
+
+关键词：词1; 词2; 词3
+\pagestyle{fancy}
+\pagestyle{plain}
+\pagenumbering{Roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%英文摘要%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+ {\bf\xiaoer Abstract}
+\end{center}
+
+\zihao{-4}
+  In this paper********************************************
+
+  ************************************************************
+
+Keywords:  word1; word 2; word 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%目 录%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage\pagenumbering{arabic} \setcounter{page}{1}
+\pagestyle{fancy}
+\fancyhead{} % clear all fields
+
+\chapter{基础知识和主要结果}
+\fancyhead[CO]{\songti\zihao{5} 海南师范大学硕士学位论文}
+\fancyhead[CE]{\songti\zihao{5} 第一章\quad 基础知识和主要结果}
+\section{问题的背景和主要结果}
+\songti\zihao{-4}
+*******
+******
+\section{基础知识、基本概念}
+   *********
+  *****
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{****** }
+\fancyhead[CO]{\songti\zihao{5} 海南师范大学硕士学位论文}
+\fancyhead[CE]{\songti\zihao{5} 第二章\quad }
+*************
+
+
+**************
+\section{问题的提出}
+
+***********
+
+*********
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{99}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhead{} % clear all fields
+\fancyhead[CE]{ \songti\zihao{5} 海南师范大学硕士学位论文}
+\fancyhead[CO]{ \songti\zihao{5} 参考文献}
+\songti\zihao{-4}
+\bibitem{[1]} 陈立思. 当代世界的思想政治教育[M]. 北京:中国人民大学出版社, 1999年:192-195
+
+\bibitem{[2]} 郑少珍. 传统诚信观与现代诚信观内涵之辨析[J]. 哈尔滨职业技术学院学报, 2006,20(6):123-125
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{thebibliography}                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{攻读硕士学位期间取得的研究成果}
+%\renewcommand\baselinestretch{1.3}
+\addcontentsline{toc}{chapter}{\numberline{\zihao{-4} 攻读硕士学位期间发表论文清单}\dotfill}
+%\renewcommand{\baselinestretch}{0}
+\zihao{-4}
+一、已发表（包括已接受待发表）的论文，以及已投稿、或已成文打算投稿、或拟成文投稿
+的论文情况\underline{\bf（只填写与学位论文内容相关的部分）：}
+\vspace{3mm}
+\renewcommand{\baselinestretch}{0.6}
+%\setlength{\parskip}{0ex}
+\begin{adjustwidth}{-0cm}{-0cm}
+\zihao{5}
+ \begin{tabular}{|p{.02\textwidth}| p{.12\textwidth}| p{.27\textwidth}| p{.15\textwidth}| p{.13\textwidth}|p{.1\textwidth}|p{.06\textwidth}|}
+\hline
+  \bf\zihao{5}{ 序号} & \bf\zihao{5}{作者（全体作者，按顺序排列）} &  \bf\zihao{5}{\hspace{12mm} 题    \hspace{7mm}目}&\bf\zihao{5}{发表或投稿刊物名称、级别}&\bf\zihao{5}{发表的卷期、年月、页码}&\bf\zihao{5}{相当于学位论文的哪一部分（章、节）}& \bf\zihao{5}{被索引收录情况}\\
+\hline
+*&*&*&*&*&*&*\\[12mm]
+ \hline
+ *&*&*&*&*&*&*\\[12mm]
+ \hline
+ &&&&&&\\[12mm]
+ \hline
+ &&&&&&\\[12mm]
+ \hline
+ &&&&&&\\[12mm]
+ \hline
+ \end{tabular}
+\end{adjustwidth}
+\vspace{2mm}
+\wuhao
+
+注：在"发表的卷期、年月、页码"栏：
+
+1如果论文已发表，请填写发表的卷期、年月、页码；
+
+2如果论文已被接受，填写将要发表的卷期、年月；
+
+3以上都不是，请据实填写"已投稿"，"拟投稿"。
+
+不够请另加页。
+\vspace{5mm}
+\zihao{-4}
+
+二、与学位内容相关的其它成果（包括专利、著作、获奖项目等）
+\zihao{5}
+
+1、****。
+
+2、*****。
+
+3、*****。
+
+
+\newpage
+\chapter*{致\hspace{1cm}谢}
+\addcontentsline{toc}{chapter}{\numberline{\zihao{-4} 致\hspace{8mm}谢}\dotfill}
+\baselineskip=0.68cm \zihao{-4}
+
+在此感谢三年来………………………………以来对我的教诲、指导，感谢三年来给予我帮助、关怀的所有老师和同学。
+
+\end{document}
+
