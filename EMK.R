@@ -20,4 +20,4 @@ Q=matrix(c("q1","q3","q3","q2"),2,2)
 x0=matrix(c("pi1","pi2"),2,1)
 V0=diag(1,2)
 model.gen=list(Z=Z,A=A,R=R,B=B,U=U,Q=Q,x0=x0,V0=V0,tinitx=0)kemfit = MARSS(dat)
-w=read.csv("D:/tj01/data/Glass.csv")#∂¡»Î ˝æ›
+w=read.csv("D:/tj01/data/Glass.csv")
